@@ -1,0 +1,79 @@
+// Couleurs
+//Couleurs de fond
+$vert-principal: #00F0CD;
+$vert-secondaire: #008A76;
+//Couleur du texte
+$txt-fond :#3B0647;
+//Utilitaires couleurs
+$fond-clair: #fbfef9;
+$fond-alerte: #ff4242;
+$fond-succes: #98FF98;
+
+// Police de titre
+//Regular
+@font-face {
+    font-family: 'Titre';
+    src: url(../fonts/Titre-Sansita/Sansita-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+//Bold
+@font-face {
+    font-family: 'Titre';
+    src: url(../fonts/Titre-Sansita/Sansita-Bold.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+//Italic
+@font-face {
+    font-family: 'Titre';
+    src: url(../fonts/Titre-Sansita/Sansita-Italic.ttf);
+    font-weight: normal;
+    font-style: italic;
+}
+//Bold Italic
+@font-face {
+    font-family: 'Titre';
+    src: url(../fonts/Titre-Sansita/Sansita-BoldItalic.ttf);
+    font-weight: bold;
+    font-style: italic;
+}
+//Création de la variable « Police des titres ».
+$font-titre:'Titre',sans-serif;
+
+// Police de texte
+//Regular
+@font-face {
+    font-family: 'Texte';
+    src: url(../fonts/Texte-Recursive/static/Recursive-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+//Bold
+@font-face {
+    font-family: 'Texte';
+    src: url(../fonts/Texte-Recursive/static/Recursive-Bold.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+//Italic
+@font-face {
+    font-family: 'Texte';
+    src: url(../fonts/Texte-Recursive/static/recursive-sn-csl-st-italic.ttf);
+    font-weight: normal;
+    font-style: italic;
+}
+//Bold Italic
+@font-face {
+    font-family: 'Texte';
+    src: url(../fonts/Texte-Recursive/static/recursive-sn-lnr-st-bold-italic.ttf);
+    font-weight: bold;
+    font-style: italic;
+}
+//Création de la variable « Police des titres ».
+$font-texte:'Texte',sans-serif;
+
+
+// Utilitaires dimmensions
+$radius-btn: 5px;
+$radius-btn-menu: 10px;
