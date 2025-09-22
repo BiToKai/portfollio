@@ -1,0 +1,112 @@
+/* === Polices personnalisées ===*/
+/* Sansita pour les titres */
+@font-face {
+    font-family: 'Sansita';
+    src: url('../fonts/Titre-Sansita/Sansita-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sansita';
+    src: url('../fonts/Titre-Sansita/Sansita-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Sansita Italique */
+@font-face {
+    font-family: 'Sansita';
+    src: url('../fonts/Titre-Sansita/Sansita-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Sansita';
+    src: url('../fonts/Titre-Sansita/Sansita-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Recursive pour le texte */
+@font-face {
+    font-family: 'Recursive';
+    src: url('../fonts/Texte-Recursive/static/Recursive-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Recursive';
+    src: url('../fonts/Texte-Recursive/static/Recursive-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* === Variables CSS === */
+:root {
+    --color-text: #3B0647;
+    /* Ajoute ici d'autres couleurs si besoin */
+}
+
+/* Utilisation dans le site */
+body {
+    font-family: 'Recursive', sans-serif;
+    color: var(--color-text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Sansita', sans-serif;
+    color: var(--color-text);
+}
+
+/* Utilisation de Recursive Regular pour les paragraphes */
+p {
+    font-family: 'Recursive', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Classe utilitaire pour texte en Recursive Bold */
+.bold {
+    font-family: 'Recursive', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Mobile (par défaut) */
+h1 {
+    font-size: 21px;
+}
+
+h2 {
+    font-size: 16px;
+}
+
+/* Tablette */
+@media (min-width: 600px) {
+    h1 {
+        font-size: 26px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+}

@@ -1,0 +1,29 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 2rem;
+    font-family: 'Sansita', sans-serif;
+}
+
+.brand {
+    font-weight: bold;
+    margin-left: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.burger {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
