@@ -8,6 +8,8 @@ const PORT = 3000;
 // Servir les fichiers statiques (CSS, JS, images…)
 app.use("/css", express.static(path.join(__dirname, "css")));
 app.use("/js", express.static(path.join(__dirname, "js")));
+app.use("/assets", express.static(path.join(__dirname, "assets")));
+app.use("/fonts", express.static(path.join(__dirname, "fonts")));
 
 // Fonction qui insère header et footer dans une page
 function renderPage(filePath) {

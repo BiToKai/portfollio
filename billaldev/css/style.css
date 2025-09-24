@@ -1,31 +1,23 @@
 /* === Polices personnalisées ===*/
-/* Sansita pour les titres */
+/* Sansita Swashed pour les titres */
 @font-face {
-    font-family: 'Sansita';
-    src: url('../fonts/Titre-Sansita/Sansita-Bold.ttf') format('truetype');
+    font-family: 'Sansita Swashed';
+    src: url('../fonts/Titre-Sansita/SansitaSwashed-Regular.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sansita Swashed';
+    src: url('../fonts/Titre-Sansita/SansitaSwashed-Bold.ttf') format('opentype');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Sansita';
-    src: url('../fonts/Titre-Sansita/Sansita-Regular.ttf') format('truetype');
+    font-family: 'Sansita Swashed';
+    src: url('../fonts/Titre-Sansita/SansitaSwashed-Italic.otf') format('opentype');
     font-weight: normal;
-    font-style: normal;
-}
-
-/* Sansita Italique */
-@font-face {
-    font-family: 'Sansita';
-    src: url('../fonts/Titre-Sansita/Sansita-Italic.ttf') format('truetype');
-    font-weight: normal;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Sansita';
-    src: url('../fonts/Titre-Sansita/Sansita-BoldItalic.ttf') format('truetype');
-    font-weight: bold;
     font-style: italic;
 }
 
@@ -44,16 +36,37 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Recursive';
+    src: url('../fonts/Texte-Recursive/static/Recursive-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Recursive';
+    src: url('../fonts/Texte-Recursive/static/Recursive-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
 /* === Variables CSS === */
 :root {
+    /* Couleur pour les textes */
     --color-text: #3B0647;
-    /* Ajoute ici d'autres couleurs si besoin */
+    /* Dégradé du haut vers le bas (par défaut) */
+    --gradient-top-bottom: linear-gradient(to bottom, #50A8A4, #00F0CD);
+
+    /* Dégradé du bas vers le haut */
+    --gradient-bottom-top: linear-gradient(to top, #50A8A4, #00F0CD);
+    --menu-popup-bg: #808080d9;
 }
 
 /* Utilisation dans le site */
 body {
     font-family: 'Recursive', sans-serif;
     color: var(--color-text);
+    margin: 10px;
 }
 
 h1,
@@ -62,8 +75,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Sansita', sans-serif;
-    color: var(--color-text);
+    font-family: 'SansitaSwashed', sans-serif;
 }
 
 /* Utilisation de Recursive Regular pour les paragraphes */
@@ -73,23 +85,37 @@ p {
     font-style: normal;
 }
 
-/* Classe utilitaire pour texte en Recursive Bold */
-.bold {
-    font-family: 'Recursive', sans-serif;
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+/*== Mobile (par défaut) ==*/
+h1 {
+    font-size: 21px;
     font-weight: bold;
     font-style: normal;
 }
 
-/* Mobile (par défaut) */
-h1 {
-    font-size: 21px;
-}
-
 h2 {
     font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
 }
 
-/* Tablette */
+/*=============
+ Media Queries
+=============*/
+
+/*== Tablette ==*/
 @media (min-width: 600px) {
     h1 {
         font-size: 26px;
