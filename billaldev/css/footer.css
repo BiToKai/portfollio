@@ -1,0 +1,17 @@
+.footer-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Aligne au centre horizontalement */
+    justify-content: flex-start;
+    /* Aligne en haut verticalement */
+    text-align: center;
+    /* Centrage du texte */
+    gap: 4px;
+    /* Espacement entre les lignes */
+    padding: 16px;
+    font-size: 14px;
+    background-color: var(--gradient-bottom-top);
+    /* Exemple couleur de fond */
+    color: #333;
+}
