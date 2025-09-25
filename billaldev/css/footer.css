@@ -1,17 +1,26 @@
+/* Style du footer mobile */
 .footer-mobile {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Aligne au centre horizontalement */
-    justify-content: flex-start;
-    /* Aligne en haut verticalement */
-    text-align: center;
-    /* Centrage du texte */
-    gap: 4px;
-    /* Espacement entre les lignes */
-    padding: 16px;
+    padding: 10px 0;
     font-size: 14px;
-    background-color: var(--gradient-bottom-top);
-    /* Exemple couleur de fond */
-    color: #333;
+    background: var(--gradient-bottom-top);
+}
+
+/* Curseur pointer pour les liens légaux */
+.footer-link {
+    cursor: pointer;
+}
+
+/* Marges verticales pour les paragraphes */
+.footer-mobile p {
+    margin: 5px 0;
+}
+
+/* Ligne de séparation fine */
+.footer-separator {
+    width: 50px;
+    border-bottom: 1px solid var(--color-text);
+    margin: 12px 0;
 }

@@ -1,118 +1,118 @@
-    /* =========
-    Mobile first
-    ========== */
+/* ===== Header principal ===== */
+header {
+    display: flex;
+    position: sticky;
+    z-index: 1000;
+    /* Reste au-dessus du contenu */
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    background: var(--gradient-top-bottom);
+}
 
-    header {
-        display: flex;
-        position: sticky;
-        z-index: 1000;
-        align-items: center;
-        justify-content: space-between;
-        padding-top: 18px;
-        padding-bottom: 18px;
-        background: var(--gradient-top-bottom);
-        margin: -10px -10px 0;
-        /* width: 100%; */
+/* Barre de navigation contenant logo et brand */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+/* Logo en gras, taille importante */
+.logo {
+    font-weight: bold;
+    font-style: normal;
+    font-size: 32px;
+    color: var(--color-text);
+    margin-left: 10px;
+}
+
+/* Nom de marque */
+.brand {
+    font-weight: normal;
+    font-style: normal;
+    font-size: 32px;
+    color: var(--color-text);
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+/* Icône burger cliquable */
+.burger {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+/* Popup menu (masqué par défaut) */
+#popup {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    /* Au-dessus du header */
+    background: var(--menu-popup-bg);
+    height: 100vh;
+    width: 100vw;
+    justify-content: space-between;
+}
+
+/* Liste du menu popup */
+#menu-liste {
+    background: var(--gradient-top-bottom);
+    width: 60vw;
+    gap: 10px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    position: relative;
+    animation: translation 1s;
+}
+
+/* Animation menu venant de la gauche */
+@keyframes translation {
+    from {
+        left: -100%;
     }
 
-    nav {
-        display: flex;
-        align-items: center;
-    }
-
-    .logo {
-        font-weight: bold;
-        font-style: normal;
-        font-size: 32px;
-        color: var(--color-text);
-        margin-left: 10px;
-    }
-
-    .brand {
-        font-weight: normal;
-        font-style: normal;
-        font-size: 32px;
-        color: var(--color-text);
-        margin-left: 20px;
-        cursor: pointer;
-
-    }
-
-    .burger {
-        width: 32px;
-        height: 32px;
-        cursor: pointer;
-        margin-right: 10px;
-    }
-
-    #popup {
-        position: fixed;
-        display: none;
-        top: 0;
+    to {
         left: 0;
-        z-index: 2000;
-        background: var(--menu-popup-bg);
-        height: 100vh;
-        width: 100vw;
-        justify-content: space-between;
-        /* z-index: 1000; */
+    }
+}
+
+/* Curseur pointer sur items menus */
+.liste {
+    cursor: pointer;
+}
+
+/* Bouton fermer menu popup avec animation zoom */
+#menu-fermer {
+    background: var(--gradient-top-bottom);
+    color: var(--color-text);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 24px;
+    cursor: pointer;
+    position: relative;
+    animation: zoom 1s;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(0, 0);
     }
 
-    #menu-liste {
-        background: var(--gradient-top-bottom);
-        width: 60vw;
-        gap: 10px;
-        padding: 40px;
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        position: relative;
-        /* animation */
-        animation: translation 1s;
+    50% {
+        transform: scale(2, 2);
     }
 
-    /* Menu venant de la gauche */
-    @keyframes translation {
-        from {
-            left: -100%
-        }
-
-        to {
-            left: 0;
-        }
+    100% {
+        transform: scale(1, 1);
     }
-
-    .liste {
-        cursor: pointer;
-    }
-
-    #menu-fermer {
-        background: var(--gradient-top-bottom);
-        color: var(--color-text);
-        height: 50px;
-        width: 50px;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 24px;
-        cursor: pointer;
-        position: relative;
-        /* Animation de zoom in zoom out */
-        animation: zoom 1s;
-    }
-
-
-    @keyframes zoom {
-        0% {
-            transform: scale(0, 0);
-        }
-
-        50% {
-            transform: scale(2, 2);
-        }
-
-        100% {
-            transform: scale(1, 1);
-        }
-    }
+}

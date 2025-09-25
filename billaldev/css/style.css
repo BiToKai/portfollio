@@ -66,11 +66,16 @@
 body {
     font-family: 'Recursive', sans-serif;
     color: var(--color-text);
-    margin: 10px;
+    margin: 0;
+}
+
+main {
+    padding: 10px;
 }
 
 .titre {
     font-family: 'Sansita Swashed', sans-serif;
+    font-weight: bold;
 }
 
 /* Utilisation de Recursive Regular pour les paragraphes */
@@ -78,6 +83,7 @@ p {
     font-family: 'Recursive', sans-serif;
     font-weight: normal;
     font-style: normal;
+    margin: unset;
 }
 
 ul {
