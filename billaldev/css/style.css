@@ -54,6 +54,7 @@
 :root {
     /* Couleur pour les textes */
     --color-text: #3B0647;
+    --color-main-bg: #EFF8FF;
     /* Dégradé du haut vers le bas (par défaut) */
     --gradient-top-bottom: linear-gradient(to bottom, #50A8A4, #00F0CD);
 
@@ -71,6 +72,7 @@ body {
 
 main {
     padding: 10px;
+    background: var(--color-main-bg);
 }
 
 .titre {
@@ -97,6 +99,11 @@ a {
     color: inherit;
 }
 
+h1,
+h2,
+h3 {
+    margin: 0;
+}
 
 
 /*== Mobile (par défaut) ==*/

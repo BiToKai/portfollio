@@ -1,0 +1,15 @@
+/* Titre de la page d'accueil */
+main h1 {
+    margin-bottom: 30px;
+}
+
+/* À propos de moi */
+#about-me {
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#about-me p {
+    line-height: 1.5;
+    margin-top: 10px;
+}

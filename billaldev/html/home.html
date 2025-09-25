@@ -2,14 +2,29 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
+    <!-- Configuration responsive des vues mobiles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accueil</title>
     <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/home.css" />
     <script src="/js/script.js" defer></script>
   </head>
+
   <body>
     <!--#include file="header.html"-->
 
-    <h1>Bienvenue sur la page d’accueil</h1>
+    <main>
+      <!-- Titre de la page d'accueil -->
+      <h1 class="titre">Bienvenue sur mon portfolio</h1>
+
+      <!-- A propos de moi -->
+      <section id="about-me">
+        <h2 class="titre">À propos de moi</h2>
+        <p>Je m'appelle Billal AMGHAR, je suis développeur web et je suis spécialisé en front-end.</p>
+        <p>J’aime créer des sites modernes et conviviaux.</p>
+        <p>Mon objectif : offrir des solutions sur mesure en alliant qualité de code et expérience utilisateur.</p>
+      </section>
+    </main>
 
     <!--#include file="footer.html"-->
   </body>
