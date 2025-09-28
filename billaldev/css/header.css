@@ -2,6 +2,7 @@
 header {
     display: flex;
     position: sticky;
+    top: 0;
     z-index: 1000;
     /* Reste au-dessus du contenu */
     align-items: center;
