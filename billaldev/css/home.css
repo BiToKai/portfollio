@@ -1,9 +1,11 @@
-/* Titre de la page d'accueil */
+/* --Page d'accueil-- */
+
+/* -Titre de la page d'accueil- */
 main h1 {
     margin-bottom: 30px;
 }
 
-/* À propos de moi */
+/* -À propos de moi- */
 #about-me {
     border-radius: 5px;
     margin-bottom: 30px;
@@ -12,4 +14,84 @@ main h1 {
 #about-me p {
     line-height: 1.5;
     margin-top: 10px;
+}
+
+/* -Compétences Techniques- */
+
+/* Titre */
+#skills h2 {
+    margin-bottom: 10px;
+}
+
+/* Tableau des compétences techniques */
+.skills-tabs {
+    border-radius: 10px;
+    padding: 18px;
+    background: var(--gradient-top-bottom);
+}
+
+/* Filtre des compétences techniques par catégorie */
+.skills-tabs nav {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 18px;
+    justify-content: flex-start;
+}
+
+/* Boutons de catégorie */
+.skills-tabs .tab {
+    font-size: 16px;
+    color: var(--color-text);
+    background: transparent;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.skills-tabs .tab.active,
+.skills-tabs .tab:hover {
+    background: var(--color-button-bg);
+}
+
+/* Liste des compétences */
+.skills-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.skills-list li {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--color-text);
+}
+
+/* Retire la bordure sur le dernier élément visible */
+.skills-list li.last-visible {
+    border-bottom: none;
+}
+
+.skills-list li .icon {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+
+.skill-title {
+    font-size: 16px;
+    width: 120px;
+    font-weight: bold;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.skill-desc {
+    font-size: 16px;
+    flex-grow: 1;
 }

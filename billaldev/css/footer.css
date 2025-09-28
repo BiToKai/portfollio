@@ -1,4 +1,4 @@
-/* Style du footer mobile */
+/* --Style du footer mobile-- */
 .footer-mobile {
     display: flex;
     flex-direction: column;
@@ -11,6 +11,8 @@
 /* Curseur pointer pour les liens légaux */
 .footer-link {
     cursor: pointer;
+    font-family: 'Sansita Swashed', sans-serif;
+    font-weight: bold;
 }
 
 /* Marges verticales pour les paragraphes */

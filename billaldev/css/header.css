@@ -1,4 +1,4 @@
-/* ===== Header principal ===== */
+/* --Header principal-- */
 header {
     display: flex;
     position: sticky;
@@ -12,13 +12,14 @@ header {
 }
 
 /* Barre de navigation contenant logo et brand */
-nav {
+header nav {
     display: flex;
     align-items: center;
 }
 
 /* Logo en gras, taille importante */
 .logo {
+    font-family: 'Sansita Swashed', sans-serif;
     font-weight: bold;
     font-style: normal;
     font-size: 32px;
@@ -28,6 +29,7 @@ nav {
 
 /* Nom de marque */
 .brand {
+    font-family: 'Sansita Swashed', sans-serif;
     font-weight: normal;
     font-style: normal;
     font-size: 32px;
@@ -44,7 +46,7 @@ nav {
     margin-right: 10px;
 }
 
-/* Popup menu (masqué par défaut) */
+/*  Popup menu (masqué par défaut) */
 #popup {
     position: fixed;
     display: none;
@@ -88,7 +90,7 @@ nav {
 }
 
 /* Bouton fermer menu popup avec animation zoom */
-#menu-fermer {
+#menu-close {
     background: var(--gradient-top-bottom);
     color: var(--color-text);
     height: 50px;
