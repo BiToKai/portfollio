@@ -11,7 +11,7 @@
 /* Curseur pointer pour les liens légaux */
 .footer-link {
     cursor: pointer;
-    font-family: 'Sansita Swashed', sans-serif;
+    font-family: 'Sansita Swashed', Georgia, serif;
     font-weight: bold;
 }
 

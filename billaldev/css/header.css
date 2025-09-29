@@ -20,7 +20,7 @@ header nav {
 
 /* Logo en gras, taille importante */
 .logo {
-    font-family: 'Sansita Swashed', sans-serif;
+    font-family: 'Sansita Swashed', Georgia, serif;
     font-weight: bold;
     font-style: normal;
     font-size: 32px;
@@ -30,7 +30,7 @@ header nav {
 
 /* Nom de marque */
 .brand {
-    font-family: 'Sansita Swashed', sans-serif;
+    font-family: 'Sansita Swashed', Georgia, serif;
     font-weight: normal;
     font-style: normal;
     font-size: 32px;
@@ -51,26 +51,31 @@ header nav {
 #popup {
     position: fixed;
     display: none;
+    justify-content: space-between;
     top: 0;
     left: 0;
     z-index: 2000;
     /* Au-dessus du header */
+    font-family: 'Sansita Swashed', Georgia, serif;
     background: var(--menu-popup-bg);
     height: 100vh;
     width: 100vw;
-    justify-content: space-between;
 }
 
 /* Liste du menu popup */
 #menu-liste {
-    background: var(--gradient-top-bottom);
-    width: 60vw;
-    gap: 10px;
-    padding: 40px;
     display: flex;
     flex-direction: column;
-    align-items: start;
     position: relative;
+    /* font-family: 'Sansita Swashed', Georgia, serif; */
+    font-weight: bold;
+    font-style: italic;
+    font-size: 18px;
+    background: var(--gradient-top-bottom);
+    width: 60vw;
+    align-items: start;
+    gap: 10px;
+    padding: 40px;
     animation: translation 1s;
 }
 
