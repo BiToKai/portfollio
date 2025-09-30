@@ -23,6 +23,11 @@ main h1 {
     margin-bottom: 10px;
 }
 
+/* compense le header sticky */
+#skills {
+    scroll-margin-top: 75px;
+}
+
 /* Tableau des compétences techniques */
 .skills-tabs {
     border-radius: 10px;
@@ -94,4 +99,85 @@ main h1 {
 .skill-desc {
     font-size: 16px;
     flex-grow: 1;
+}
+
+/* -Section Expériences- */
+#experiences {
+    margin-top: 30px;
+    /* padding: 20px; */
+    /* évite que le header sticky cache le titre */
+    scroll-margin-top: 70px;
+}
+
+/* Titre principal */
+#experiences h2 {
+    margin-bottom: 10px;
+}
+
+/* Texte d’introduction */
+#experiences>p {
+    /* font-family: 'Recursive', sans-serif; */
+    /* font-size: 16px; */
+    margin-bottom: 20px;
+}
+
+/* Chaque projet */
+.experience {
+    background: var(--gradient-top-bottom);
+    border-radius: 12px;
+    padding: 5px 30px;
+    margin-bottom: 20px;
+}
+
+/* Titre du projet */
+.experience .project-title {
+    font-family: 'Sansita Swashed', Georgia, serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--color-text);
+    margin-bottom: 4px;
+}
+
+/* Sous-titre du projet */
+.experience .project-subtitle {
+    font-family: 'Recursive', sans-serif;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+/* Image du projet */
+.experience .project-image {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 16px;
+}
+
+/* Titres secondaires (A propos, Compétences techniques) */
+
+
+/* Paragraphes */
+.experience p {
+    /* font-family: 'Recursive', sans-serif; */
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+/* Liste des compétences */
+.skills-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+
+.skills-tags li {
+    /* font-family: 'Recursive', sans-serif; */
+    font-size: 14px;
+    font-weight: bold;
+    background: var(--color-text);
+    color: var(--color-button-bg);
+    padding: 4px 10px;
+    border-radius: 6px;
 }

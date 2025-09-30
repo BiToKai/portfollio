@@ -50,16 +50,26 @@ header nav {
 /*  Popup menu (masqué par défaut) */
 #popup {
     position: fixed;
-    display: none;
+    display: flex;
     justify-content: space-between;
     top: 0;
     left: 0;
     z-index: 2000;
-    /* Au-dessus du header */
     font-family: 'Sansita Swashed', Georgia, serif;
     background: var(--menu-popup-bg);
     height: 100vh;
     width: 100vw;
+
+    /* Masqué par défaut */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+/* Quand on ajoute .show avec JS → le menu apparaît */
+#popup.show {
+    opacity: 1;
+    visibility: visible;
 }
 
 /* Liste du menu popup */
@@ -67,7 +77,6 @@ header nav {
     display: flex;
     flex-direction: column;
     position: relative;
-    /* font-family: 'Sansita Swashed', Georgia, serif; */
     font-weight: bold;
     font-style: italic;
     font-size: 18px;

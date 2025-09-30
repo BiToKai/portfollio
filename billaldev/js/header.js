@@ -2,93 +2,65 @@ const burger = document.querySelector(".burger");
 const popup = document.getElementById("popup");
 const menuClose = document.getElementById("menu-close");
 
+// Vérifie si on est sur mobile (menu burger uniquement)
 function isMobile() {
   return window.innerWidth < 600;
 }
 
-function isTablet() {
-  return window.innerWidth >= 600 && window.innerWidth <= 1024;
-}
-
+// Ouvrir le menu burger
 burger.addEventListener("click", () => {
-  if (isMobile() || isTablet()) {
-    popup.style.display = "flex";
+  if (isMobile()) {
+    // utilise la classe CSS .show (opacity + transition)
+    popup.classList.add("show");
   }
 });
 
+// Fermer le menu
 menuClose.addEventListener("click", () => {
-  popup.style.display = "none";
+  popup.classList.remove("show");
 });
 
-document.querySelectorAll("#menu-liste li").forEach((item) => {
-  item.addEventListener("click", (event) => {
-    event.preventDefault();
-    popup.style.display = "none";
+// Ferme le menu automatiquement quand on clique sur un lien
+document.querySelectorAll("#menu-liste a").forEach((link) => {
+  link.addEventListener("click", () => {
+    // sécurité → on ne gère que le mobile
+    if (!isMobile()) return;
 
-    switch (item.id) {
-      case "Accueil":
-        if (window.location.pathname.endsWith("home.html") || window.location.pathname === "/") {
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        } else {
-          window.location.href = "home.html";
-        }
-        break;
+    // ferme le menu burger
+    popup.classList.remove("show");
 
-      case "Compétences":
-        if (window.location.pathname.endsWith("home.html") || window.location.pathname === "/") {
-          const skillsSection = document.getElementById("skills");
-          if (skillsSection) {
-            skillsSection.scrollIntoView({ behavior: "smooth" });
+    const href = link.getAttribute("href");
 
-            setTimeout(() => {
-              const yOffset = -75; // hauteur du header sticky
-              const y = skillsSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
-              window.scrollTo({ top: y, behavior: "smooth" });
-            }, 300);
-          }
-          // Met à jour le hash dans l'URL de manière propre
-          history.replaceState(null, null, "#competences-techniques");
-        } else {
-          window.location.href = "home#competences-techniques";
-        }
-        break;
+    // Cas spécifique : Compétences
+    if (href === "home.html#skills" || href === "#skills") {
+      const skillsSection = document.getElementById("skills");
 
-      case "Expériences":
-        if (window.location.pathname.endsWith("home.html") || window.location.pathname === "/") {
-          const expSection = document.getElementById("experiences");
-          if (expSection) {
-            expSection.scrollIntoView({ behavior: "smooth" });
-
-            setTimeout(() => {
-              const yOffset = -75; // hauteur du header sticky
-              const y = expSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
-              window.scrollTo({ top: y, behavior: "smooth" });
-            }, 300);
-          }
-        } else {
-          window.location.href = "home#experiences";
-        }
-        break;
-
-      case "Contact":
-        if (!window.location.pathname.endsWith("contact.html")) {
-          window.location.href = "contact";
-        }
-        break;
+      // Si on est déjà sur home.html → scroll avec offset
+      if (skillsSection) {
+        setTimeout(() => {
+          // hauteur du header sticky
+          const yOffset = -75;
+          const y = skillsSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+          window.scrollTo({ top: y, behavior: "smooth" });
+        }, 50);
+      } else {
+        // Sinon, redirection vers home.html
+        window.location.href = "home.html#skills";
+      }
     }
   });
 });
 
-// Ajuste dynamique du padding main selon le scroll
+// Ajuste le padding du <main> en fonction du scroll
 function adjustMainPadding() {
   const main = document.querySelector("main");
   if (!main) return;
 
   if (window.scrollY === 0) {
-    // espace minimal quand en haut
+    // en haut → petit padding
     main.style.paddingTop = "10px";
   } else {
-    // hauteur header sticky quand on scroll
+    // scrolled → compense le header sticky
     main.style.paddingTop = "75px";
   }
 }

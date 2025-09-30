@@ -74,13 +74,13 @@ body {
 /* Décalage pour que le contenu ne soit pas caché sous le header sticky */
 main {
     /* 68px = hauteur approximative header sticky */
-    padding: 68px 10px 10px 10px;
+    padding: 70px 10px 10px 10px;
     background: var(--color-main-bg);
 }
 
 /* Décalage lors des scrolls vers ancres */
 html {
-    scroll-padding-top: 75px;
+    scroll-padding-top: 70px;
 }
 
 /*== Mobile (par défaut) ==*/
