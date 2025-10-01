@@ -76,6 +76,7 @@ main {
     /* 68px = hauteur approximative header sticky */
     padding: 70px 10px 10px 10px;
     background: var(--color-main-bg);
+    /* font-size: 16px; */
 }
 
 /* Décalage lors des scrolls vers ancres */
@@ -101,7 +102,7 @@ h2 {
 ===============*/
 
 /*== Tablette ==*/
-@media (min-width: 600px) {
+@media (min-width: 500px) {
     h1 {
         font-size: 26px;
     }

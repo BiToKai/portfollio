@@ -125,48 +125,48 @@ main h1 {
 .experience {
     background: var(--gradient-top-bottom);
     border-radius: 12px;
-    padding: 5px 30px;
+    padding: 10px 30px;
     margin-bottom: 20px;
 }
 
-/* Titre du projet */
-.experience .project-title {
-    font-family: 'Sansita Swashed', Georgia, serif;
-    font-weight: bold;
-    font-size: 18px;
-    color: var(--color-text);
-    margin-bottom: 4px;
+/* Titre du projet, titres secondaires (A propos, Compétences techniques) et paragraphes */
+#experiences .experience .project-title,
+#experiences h2,
+.experience p {
+    /* font-family: 'Sansita Swashed', Georgia, serif; */
+    /* font-weight: bold; */
+    /* font-size: 18px; */
+    /* color: var(--color-text); */
+    margin-bottom: 8px;
 }
 
 /* Sous-titre du projet */
 .experience .project-subtitle {
     font-family: 'Recursive', sans-serif;
     font-size: 16px;
-    margin-bottom: 12px;
+    line-height: 1.5;
+    margin-bottom: 8px;
 }
 
 /* Image du projet */
 .experience .project-image {
     width: 100%;
     border-radius: 10px;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
 }
-
-/* Titres secondaires (A propos, Compétences techniques) */
-
 
 /* Paragraphes */
-.experience p {
-    /* font-family: 'Recursive', sans-serif; */
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 10px;
-}
+/* .experience p { */
+/* font-family: 'Recursive', sans-serif; */
+/* font-size: 16px; */
+/* line-height: 1.5; */
+/* margin-bottom: 10px; */
+/* } */
 
 /* Liste des compétences */
 .skills-tags {
     display: flex;
-    gap: 8px;
+    gap: 13px;
     flex-wrap: wrap;
     padding: 0;
     margin: 0;
@@ -174,7 +174,7 @@ main h1 {
 
 .skills-tags li {
     /* font-family: 'Recursive', sans-serif; */
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bold;
     background: var(--color-text);
     color: var(--color-button-bg);
