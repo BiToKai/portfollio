@@ -4,7 +4,7 @@ const menuClose = document.getElementById("menu-close");
 
 // Vérifie si on est sur mobile (menu burger uniquement)
 function isMobile() {
-  return window.innerWidth < 600;
+  return window.innerWidth < 500;
 }
 
 // Ouvrir le menu burger
