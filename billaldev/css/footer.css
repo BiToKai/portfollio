@@ -1,4 +1,4 @@
-/* --Style du footer mobile-- */
+/* --Style du footer mobile (par défaut)-- */
 .footer-mobile {
     display: flex;
     flex-direction: column;
@@ -6,23 +6,96 @@
     padding: 10px 0;
     font-size: 14px;
     background: var(--gradient-bottom-top);
+    text-align: center;
 }
 
-/* Curseur pointer pour les liens légaux */
+/* Bloc réutilisable */
+.footer-block {
+    width: 100%;
+}
+
+/* Titres ajoutés en HTML — on les cache par défaut pour ne rien changer au mobile */
+.footer-title {
+    display: none;
+    /* caché en mobile pour conserver ton rendu d'origine */
+}
+
+/* Curseur pointer pour les liens légaux (mobile kept) */
 .footer-link {
     cursor: pointer;
     font-family: 'Sansita Swashed', Georgia, serif;
     font-weight: bold;
 }
 
-/* Marges verticales pour les paragraphes */
+/* Marges verticales pour les paragraphes (mobile kept) */
 .footer-mobile p {
     margin: 5px 0;
 }
 
-/* Ligne de séparation fine */
+/* Ligne de séparation fine (visible seulement en mobile) */
 .footer-separator {
     width: 50px;
     border-bottom: 1px solid var(--color-text);
     margin: 12px 0;
+}
+
+/* ---------------------------
+   TABLETTE (>=500px) — mise en page fidèle à la maquette
+   --------------------------- */
+@media (min-width: 500px) {
+
+    /* container : 2 colonnes centrées */
+    .footer-mobile {
+        display: grid;
+        grid-template-columns: auto auto;
+        /* deux colonnes ajustées au contenu */
+        column-gap: 80px;
+        /* espace de 80px entre les blocs */
+        justify-content: center;
+        /* centre l’ensemble des colonnes */
+        align-items: start;
+        /* titres au même niveau */
+        padding: 22px 0;
+        text-align: left;
+    }
+
+    /* masquer la ligne de séparation (utile en mobile mais pas en tablette) */
+    .footer-separator {
+        display: none;
+    }
+
+    /* afficher les titres */
+    .footer-title {
+        display: block;
+        font-size: 14px;
+        margin: 0 0 12px 0;
+    }
+
+    /* paragraphes */
+    .footer-block p {
+        font-size: 14px;
+        margin: 6px 0;
+    }
+
+    .footer-link {
+        font-family: 'Recursive', Arial, sans-serif;
+        font-weight: normal;
+        font-size: 16px;
+    }
+
+    .footer-left,
+    .footer-right {
+        align-self: start;
+        /* garantit que les deux blocs restent alignés en haut */
+    }
+}
+
+@media (min-width: 580px) {
+    .footer-title {
+        font-size: 16px;
+    }
+
+    .footer-block p {
+        font-size: 15px;
+    }
 }
