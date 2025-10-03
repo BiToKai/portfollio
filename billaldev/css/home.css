@@ -181,3 +181,15 @@ main h1 {
     padding: 4px 10px;
     border-radius: 6px;
 }
+
+@media (min-width: 500px) {
+    main {
+        padding: 0 10%;
+    }
+}
+
+@media (min-width: 580px) {
+    main {
+        padding: 0 15%;
+    }
+}

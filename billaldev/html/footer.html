@@ -7,9 +7,9 @@
     <!-- Titre ajouté (affiché uniquement en tablette) -->
     <h2 class="footer-title">Informations légales :</h2>
 
-    <!-- Liens légaux (identiques à ton mobile d'origine) -->
-    <p><a href="legal.html" class="footer-link">Mentions légales</a></p>
-    <p><a href="privacy.html" class="footer-link">Politique de confidentialité</a></p>
+    <!-- Liens légaux (identiques à ton mobile d'origine mais transformés en liens cliquables) -->
+    <a href="legal.html" class="footer-link">Mentions légales</a>
+    <a href="privacy.html" class="footer-link">Politique de confidentialité</a>
   </div>
 
   <!-- Séparateur visuel (visible uniquement en mobile, masqué en tablette) -->
@@ -26,3 +26,11 @@
     <p class="footer-icons">Icons by <strong>Icons8</strong></p>
   </div>
 </footer>
+
+<!-- === Bouton retour haut de page ===
+     - Placé en dehors du footer mais injecté avec lui sur toutes les pages
+     - Fixé en bas à droite de l’écran
+     - Icône personnalisable via assets/haut-de-page/haut-page-min.webp -->
+<button id="scrollToTopBtn" aria-label="Remonter en haut">
+  <img src="../assets/haut-de-page/haut-page-min.webp" alt="Retour en haut" />
+</button>
