@@ -1,0 +1,22 @@
+/* --Page Mentions légales-- */
+
+/* Titre principal */
+.legal-container h1 {
+    margin-bottom: 20px;
+}
+
+/* Sous-titres, Paragraphes et Listes */
+.legal-container h2,
+.legal-container p,
+.legal-container ul {
+    margin-bottom: 10px;
+}
+
+/* Listes */
+.legal-container ul {
+    list-style: square;
+}
+
+.legal-container li {
+    margin-left: 25px;
+}
