@@ -126,7 +126,7 @@ main h1 {
     background: var(--gradient-top-bottom);
     border-radius: 12px;
     padding: 10px 30px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 /* Titre du projet, titres secondaires (A propos, Compétences techniques) et paragraphes */
@@ -180,16 +180,4 @@ main h1 {
     color: var(--color-button-bg);
     padding: 4px 10px;
     border-radius: 6px;
-}
-
-@media (min-width: 500px) {
-    main {
-        padding: 0 10%;
-    }
-}
-
-@media (min-width: 580px) {
-    main {
-        padding: 0 15%;
-    }
 }
