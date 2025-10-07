@@ -1,0 +1,135 @@
+/* === Page Contact (Styles par défaut pour mobile < 500px) === */
+
+/* --- Conteneur principal du formulaire --- */
+.contact-form-container {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 25px;
+    background: var(--gradient-bottom-top);
+}
+
+/* --- Séparateur --- */
+
+.contact-form-container .separator {
+    border: none;
+    height: 1px;
+    background-color: var(--color-text);
+    margin-top: 9px;
+    margin-bottom: 9px;
+}
+
+/* --- Structure des champs --- */
+.form-group {
+    margin-bottom: 9px;
+}
+
+.contact-form-container label {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.required {
+    color: var(--color-alerte);
+    margin-left: 3px;
+    font-weight: bold;
+}
+
+/* --- Champs de saisie (input, textarea) --- */
+.contact-form-container input[type="text"],
+.contact-form-container input[type="email"],
+.contact-form-container textarea {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background: var(--color-body-bg);
+    font-family: 'Recursive', sans-serif;
+    font-size: 16px;
+}
+
+/* On supprime l'effet de survol pour le focus sur mobile, pour un look plus natif */
+.contact-form-container input:focus,
+.contact-form-container textarea:focus {
+    outline: 2px solid var(--color-button-bg);
+}
+
+.contact-form-container textarea {
+    resize: vertical;
+}
+
+/* --- Case à cocher et conditions d'utilisation --- */
+.checkbox-group {
+    display: flex;
+    /* Aligne la checkbox en haut du texte si celui-ci passe sur plusieurs lignes */
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: auto;
+    /* Un peu plus grand pour être plus facile à cocher au doigt */
+    width: 1.2em;
+    height: 1.2em;
+    margin-top: 0.2em;
+    /* Pour un meilleur alignement vertical avec le texte */
+    accent-color: var(--color-text);
+}
+
+.checkbox-group label {
+    margin-bottom: 0;
+    font-weight: normal;
+}
+
+/* --- Placeholder pour reCAPTCHA --- */
+.g-recaptcha-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 78px;
+    background-color: #f9f9f9;
+    border: 1px solid #d3d3d3;
+    border-radius: 4px;
+    color: #555;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 5px;
+}
+
+/* --- Notice et Bouton d'envoi --- */
+.required-notice {
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--color-button-bg);
+    color: var(--color-text);
+    font-family: 'Sansita Swashed', Georgia, serif;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    /* L'effet de survol ne se verra pas sur mobile, mais est prêt pour le desktop */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/*
+  NOTE :
+  Pour adapter ce formulaire aux écrans plus grands (> 500px),
+  il suffira d'ajouter des règles dans les media queries de votre
+  fichier style.css ou ici-même, par exemple :
+  
+  @media (min-width: 500px) {
+      .contact-form-container {
+          padding: 40px;
+      }
+  }
+*/
