@@ -1,0 +1,29 @@
+/* --Page Mentions légales-- */
+
+/* Titre principal */
+.privacy-container h1 {
+    margin-bottom: 20px;
+}
+
+/* Sous-titres, Paragraphes et Listes */
+.privacy-container h2,
+.privacy-container p,
+.privacy-container ul {
+    margin-bottom: 10px;
+}
+
+/* Listes */
+.privacy-container ul {
+    list-style: square;
+}
+
+.privacy-container li {
+    margin-left: 25px;
+}
+
+/* Espacement pour les écrans plus larges */
+@media (min-width: 500px) {
+    .privacy-container h1 {
+        margin-bottom: 50px;
+    }
+}

@@ -4,7 +4,6 @@
 /* .legal-container {
     margin-bottom: 30px;
 } */
-
 .legal-container h1 {
     margin-bottom: 20px;
 }
@@ -23,4 +22,11 @@
 
 .legal-container li {
     margin-left: 25px;
+}
+
+/* Espacement pour les écrans plus larges */
+@media (min-width: 500px) {
+    .legal-container h1 {
+        margin-bottom: 50px;
+    }
 }
