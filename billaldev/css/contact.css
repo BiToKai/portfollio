@@ -1,4 +1,4 @@
-/* === Page Contact (Styles par défaut pour mobile < 500px) === */
+/* === Page Contact === */
 
 /* --- Conteneur principal du formulaire --- */
 .contact-form-container {
@@ -22,11 +22,13 @@
     margin-bottom: 20px;
 }
 
+/* Prenom, Nom, Email, Sujet, Message */
 .contact-form-container label {
     display: block;
     margin-bottom: 10px;
 }
 
+/* Champ requis */
 .required {
     color: var(--color-alerte);
     margin-left: 3px;
@@ -46,7 +48,7 @@
     font-size: 16px;
 }
 
-/* On supprime l'effet de survol pour le focus sur mobile, pour un look plus natif */
+/* Effet visuel quand on clique sur un champ */
 .contact-form-container input:focus,
 .contact-form-container textarea:focus {
     outline: 2px solid var(--color-button-bg);
@@ -59,7 +61,6 @@
 /* --- Case à cocher et conditions d'utilisation --- */
 .checkbox-group {
     display: flex;
-    /* Aligne la checkbox en haut du texte si celui-ci passe sur plusieurs lignes */
     align-items: flex-start;
     gap: 10px;
     margin-bottom: 20px;
@@ -71,10 +72,10 @@
     width: 1.2em;
     height: 1.2em;
     margin-top: 0.2em;
-    /* Pour un meilleur alignement vertical avec le texte */
     accent-color: var(--color-text);
 }
 
+/* --- Label de la case à cocher --- */
 .checkbox-group label {
     margin-bottom: 0;
 }
@@ -85,7 +86,7 @@
     align-items: center;
     justify-content: center;
     height: 78px;
-    width: 80%;
+    width: 250px;
     background-color: #f9f9f9;
     border: 1px solid #d3d3d3;
     border-radius: 4px;
@@ -102,24 +103,93 @@
     margin-bottom: 20px;
 }
 
+/* --- Bouton d'envoi --- */
 .submit-btn {
-    width: 50%;
     padding: 15px 24px;
     border: none;
     border-radius: 5px;
     color: var(--color-text);
     background: var(--color-button-valider);
     font-size: 21px;
-    font-weight: bold;
     cursor: pointer;
-    /* L'effet de survol ne se verra pas sur mobile, mais est prêt pour le desktop */
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     display: block;
     margin: 0 auto;
-
 }
 
+/* --- Effet au survol du bouton --- */
 .submit-btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/* == RESPONSIVE -- ADAPTATION AUX GRANDES TAILLES D'ÉCRAN == */
+
+@media (min-width: 500px) {
+
+    /* On ajuste le padding du conteneur principal pour plus d'espace */
+    /* main {
+        padding: 0 10% 30px;
+    } */
+
+    /* On augmente la taille des titres */
+    /* h1 {
+        font-size: 26px;
+    } */
+
+    /* --- Structure du formulaire en 2 colonnes --- */
+
+    /* 1. Le conteneur de la ligne (Prénom + Nom) devient un conteneur Flex */
+    .contact-form-container .form-row {
+        display: flex;
+        gap: 36px;
+    }
+
+    /* 2. Chaque groupe de champ dans cette ligne prend 50% de la largeur */
+    .contact-form-container .form-row .form-group {
+        flex: 1;
+        /* Propriété magique pour que les éléments prennent une part égale de l'espace */
+    }
+
+    /* --- Champs de saisie (input, textarea) --- */
+    .contact-form-container label,
+    .contact-form-container input[type="text"],
+    .contact-form-container input[type="email"],
+    .contact-form-container textarea {
+        font-size: 17px;
+    }
+
+    /* --- Notice --- */
+    .required-notice,
+    .checkbox-group label {
+        font-size: 15px;
+    }
+
+    /* --- Bouton d'envoi --- */
+    .submit-btn {
+        font-size: 26px;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    /* --- Champs de saisie (input, textarea) --- */
+    .contact-form-container label,
+    .contact-form-container input[type="text"],
+    .contact-form-container input[type="email"],
+    .contact-form-container textarea {
+        font-size: 17px;
+    }
+
+    /* --- Notice --- */
+    .required-notice,
+    .checkbox-group label {
+        font-size: 16px;
+    }
+
+    /* --- Bouton d'envoi --- */
+    .submit-btn {
+        font-size: 32px;
+    }
 }
