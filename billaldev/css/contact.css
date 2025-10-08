@@ -9,23 +9,22 @@
 }
 
 /* --- Séparateur --- */
-
 .contact-form-container .separator {
     border: none;
     height: 1px;
     background-color: var(--color-text);
-    margin-top: 9px;
-    margin-bottom: 9px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 /* --- Structure des champs --- */
 .form-group {
-    margin-bottom: 9px;
+    margin-bottom: 20px;
 }
 
 .contact-form-container label {
     display: block;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .required {
@@ -63,6 +62,7 @@
     /* Aligne la checkbox en haut du texte si celui-ci passe sur plusieurs lignes */
     align-items: flex-start;
     gap: 10px;
+    margin-bottom: 20px;
 }
 
 .checkbox-group input[type="checkbox"] {
@@ -77,7 +77,6 @@
 
 .checkbox-group label {
     margin-bottom: 0;
-    font-weight: normal;
 }
 
 /* --- Placeholder pour reCAPTCHA --- */
@@ -86,6 +85,7 @@
     align-items: center;
     justify-content: center;
     height: 78px;
+    width: 80%;
     background-color: #f9f9f9;
     border: 1px solid #d3d3d3;
     border-radius: 4px;
@@ -98,38 +98,28 @@
 /* --- Notice et Bouton d'envoi --- */
 .required-notice {
     font-size: 14px;
-    margin-bottom: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .submit-btn {
-    width: 100%;
-    padding: 15px;
+    width: 50%;
+    padding: 15px 24px;
     border: none;
-    border-radius: 10px;
-    background-color: var(--color-button-bg);
+    border-radius: 5px;
     color: var(--color-text);
-    font-family: 'Sansita Swashed', Georgia, serif;
-    font-size: 20px;
+    background: var(--color-button-valider);
+    font-size: 21px;
     font-weight: bold;
     cursor: pointer;
     /* L'effet de survol ne se verra pas sur mobile, mais est prêt pour le desktop */
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: block;
+    margin: 0 auto;
+
 }
 
 .submit-btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
-
-/*
-  NOTE :
-  Pour adapter ce formulaire aux écrans plus grands (> 500px),
-  il suffira d'ajouter des règles dans les media queries de votre
-  fichier style.css ou ici-même, par exemple :
-  
-  @media (min-width: 500px) {
-      .contact-form-container {
-          padding: 40px;
-      }
-  }
-*/
