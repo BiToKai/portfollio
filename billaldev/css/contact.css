@@ -35,6 +35,15 @@
     font-weight: bold;
 }
 
+/* --- Messages d'erreur  --- */
+.error-message {
+    /* Masqué par défaut  */
+    display: none;
+    color: var(--color-alerte);
+    font-size: 14px;
+    margin-top: 5px;
+}
+
 /* --- Champs de saisie (input, textarea) --- */
 .contact-form-container input[type="text"],
 .contact-form-container input[type="email"],
@@ -80,22 +89,6 @@
     margin-bottom: 0;
 }
 
-/* --- Placeholder pour reCAPTCHA --- */
-.g-recaptcha-placeholder {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 78px;
-    width: 250px;
-    background-color: #f9f9f9;
-    border: 1px solid #d3d3d3;
-    border-radius: 4px;
-    color: #555;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding: 5px;
-}
-
 /* --- Notice et Bouton d'envoi --- */
 .required-notice {
     font-size: 14px;
@@ -127,29 +120,17 @@
 /* == RESPONSIVE -- ADAPTATION AUX GRANDES TAILLES D'ÉCRAN == */
 
 @media (min-width: 500px) {
-
-    /* On ajuste le padding du conteneur principal pour plus d'espace */
-    /* main {
-        padding: 0 10% 30px;
-    } */
-
-    /* On augmente la taille des titres */
-    /* h1 {
-        font-size: 26px;
-    } */
-
     /* --- Structure du formulaire en 2 colonnes --- */
 
-    /* 1. Le conteneur de la ligne (Prénom + Nom) devient un conteneur Flex */
+    /*  Le conteneur de la ligne (Prénom + Nom) devient un conteneur Flex */
     .contact-form-container .form-row {
         display: flex;
         gap: 36px;
     }
 
-    /* 2. Chaque groupe de champ dans cette ligne prend 50% de la largeur */
+    /*  Chaque groupe de champ dans cette ligne prend 50% de la largeur */
     .contact-form-container .form-row .form-group {
         flex: 1;
-        /* Propriété magique pour que les éléments prennent une part égale de l'espace */
     }
 
     /* --- Champs de saisie (input, textarea) --- */

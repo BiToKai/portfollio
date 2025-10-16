@@ -16,6 +16,30 @@ main h1 {
     margin-top: 10px;
 }
 
+.github-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--color-button-bg);
+    color: var(--color-text);
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 8px 14px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.github-button:hover {
+    background: var(--color-button-valider);
+
+}
+
+.github-icon {
+    width: 20px;
+    height: 20px;
+}
+
+
 /* -Compétences Techniques- */
 
 /* Titre */
