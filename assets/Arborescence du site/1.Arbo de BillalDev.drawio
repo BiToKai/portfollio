@@ -1,0 +1,56 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0" version="28.2.7">
+  <diagram name="Page-1" id="fESBRE9mBJM1O2KwEALA">
+    <mxGraphModel dx="764" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="3" value="Contact" style="rounded=1;arcSize=20;strokeWidth=2;fontColor=#3B0647;fillColor=#00F0CD;strokeColor=#5CFFE7;" parent="1" vertex="1">
+          <mxGeometry x="73" y="112" width="85" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="Mentions légales" style="rounded=1;arcSize=20;strokeWidth=2;fontColor=#3B0647;fillColor=#00F0CD;strokeColor=#5CFFE7;" parent="1" vertex="1">
+          <mxGeometry x="41" y="216" width="150" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="DUz7gWzUdicOYo0xaci6-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="5" target="4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5" value="Politique de confidentialité" style="rounded=1;arcSize=20;strokeWidth=2;fontColor=#3B0647;fillColor=#00F0CD;strokeColor=#5CFFE7;" parent="1" vertex="1">
+          <mxGeometry x="8" y="320" width="216" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="9" value="" style="curved=1;startArrow=block;endArrow=block;exitX=0.72;exitY=0;entryX=0.72;entryY=1;startFill=1;strokeColor=#3B0647;" parent="1" source="3" target="2" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="151" y="87" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="10" value="" style="curved=1;startArrow=block;endArrow=block;exitX=0.79;exitY=0;entryX=1;entryY=0.97;startFill=1;strokeColor=#3B0647;" parent="1" source="4" target="2" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="200" y="191" />
+              <mxPoint x="200" y="87" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="11" value="" style="curved=1;startArrow=block;endArrow=block;exitX=0.76;exitY=0;entryX=1;entryY=0.86;startFill=1;strokeColor=#3B0647;" parent="1" source="5" target="2" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="226" y="295" />
+              <mxPoint x="226" y="87" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="12" value="" style="startArrow=block;endArrow=block;exitX=0.5;exitY=0;entryX=0.51;entryY=1;exitDx=0;exitDy=0;entryDx=0;entryDy=0;strokeColor=#3B0647;" parent="1" source="4" target="3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="13" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#3B0647;" parent="1" source="4" target="5" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2" value="Accueil" style="rounded=1;arcSize=20;strokeWidth=2;fontColor=#3B0647;fillColor=#00F0CD;strokeColor=#5CFFE7;" parent="1" vertex="1">
+          <mxGeometry x="75" y="8" width="82" height="54" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

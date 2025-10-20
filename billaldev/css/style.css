@@ -2,14 +2,14 @@
 /* Sansita Swashed pour les titres */
 @font-face {
     font-family: 'Sansita Swashed';
-    src: url('../fonts/Titre-Sansita/sansita-swashed-latin-400-normal.woff2') format('woff2');
+    src: url('../fonts/titre-sansita-swashed/sansita-swashed-latin-400-normal.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Sansita Swashed';
-    src: url('../fonts/Titre-Sansita/sansita-swashed-latin-700-normal.woff2') format('woff2');
+    src: url('../fonts/titre-sansita-swashed/sansita-swashed-latin-700-normal.woff2') format('woff2');
     font-weight: bold;
     font-style: normal;
 }
@@ -17,14 +17,14 @@
 /* Recursive pour le texte */
 @font-face {
     font-family: 'Recursive';
-    src: url('../fonts/Texte-Recursive/recursive-latin-400-normal.woff2') format('woff2');
+    src: url('../fonts/texte-recursive/recursive-latin-400-normal.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Recursive';
-    src: url('../fonts/Texte-Recursive/recursive-latin-700-normal.woff2') format('woff2');
+    src: url('../fonts/texte-recursive/recursive-latin-700-normal.woff2') format('woff2');
     font-weight: bold;
     font-style: normal;
 }
