@@ -32,10 +32,10 @@ document.querySelectorAll("#menu-liste a").forEach((link) => {
     const href = link.getAttribute("href");
 
     // Cas spécifique : Compétences
-    if (href === "home.html#skills" || href === "#skills") {
+    if (href === "index.html#skills" || href === "#skills") {
       const skillsSection = document.getElementById("skills");
 
-      // Si on est déjà sur home.html → scroll avec offset
+      // Si on est déjà sur index.html → scroll avec offset
       if (skillsSection) {
         setTimeout(() => {
           // hauteur du header sticky
@@ -44,8 +44,8 @@ document.querySelectorAll("#menu-liste a").forEach((link) => {
           window.scrollTo({ top: y, behavior: "smooth" });
         }, 50);
       } else {
-        // Sinon, redirection vers home.html
-        window.location.href = "home.html#skills";
+        // Sinon, redirection vers index.html
+        window.location.href = "index.html#skills";
       }
     }
   });

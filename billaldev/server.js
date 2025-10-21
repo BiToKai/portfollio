@@ -26,7 +26,7 @@ function renderPage(filePath) {
 
 // Page d'accueil
 app.get("/", (req, res) => {
-  const filePath = path.join(__dirname, "html", "home.html");
+  const filePath = path.join(__dirname, "html", "index.html");
   res.send(renderPage(filePath));
 });
 

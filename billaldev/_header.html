@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="../css/header.css" />
+<header>
+  <nav>
+    <!-- Logo et nom de marque -->
+    <a href="index.html"><span class="logo title">{B}</span></a>
+    <!-- Le brand est maintenant un lien cliquable vers l'accueil -->
+    <a href="index.html" class="brand title">BillalDev</a>
+  </nav>
+
+  <!-- Icône burger (mobile uniquement) -->
+  <img src="../assets/menu-burger/menu-burger.webp" alt="Menu" class="burger" />
+
+  <!-- Menu horizontal (tablette uniquement) -->
+  <ul class="menu-horizontal">
+    <li><a href="index.html#skills">Compétences</a></li>
+    <li><a href="index.html#experiences">Expériences</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+
+  <!-- Popup menu latéral (mobile) -->
+  <div id="popup">
+    <ul id="menu-liste">
+      <!-- Accueil : ramène toujours à l'accueil -->
+      <li class="liste" id="Accueil"><a href="index.html">Accueil</a></li>
+
+      <!-- Compétences : ramène à la section #skills -->
+      <li class="liste" id="Compétences"><a href="index.html#skills">Compétences</a></li>
+
+      <!-- Expériences : ramène à la section #experiences -->
+      <li class="liste" id="Expériences"><a href="index.html#experiences">Expériences</a></li>
+
+      <!-- Contact : lien direct -->
+      <li class="liste" id="Contact"><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <!-- Bouton pour fermer le menu popup -->
+    <div id="menu-close" class="title">X</div>
+  </div>
+</header>
