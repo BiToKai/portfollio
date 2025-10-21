@@ -5,6 +5,8 @@ const ROOT = __dirname;
 const HTML_DIR = path.join(ROOT, "html");
 const OUT_DIR = path.join(ROOT, "build");
 const STATIC_DIRS = ["css", "js", "assets", "fonts"];
+// Names of directories to skip when scanning/copying
+const SKIP_NAMES = new Set([...STATIC_DIRS, path.basename(OUT_DIR), "node_modules"]);
 
 function ensureDir(dir) {
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
@@ -23,6 +25,8 @@ function renderPage(filePath) {
     }
     return `<!-- include ${inc} not found -->`;
   });
+  // Adjust asset paths for production deployment: ../anything -> billaldev/anything
+  content = content.replace(/\.\.\/([A-Za-z0-9_\/\-.]+)/g, "/billaldev/$1");
   return content;
 }
 
@@ -54,48 +58,26 @@ function copyRecursive(src, dest) {
 // Build HTML files, skipping items starting with '_'
 // Build HTML files by scanning the project root for .html files (not starting with '_')
 // and by processing any html files inside `html/` subfolder. We skip static dirs.
-function buildHtmlFromRoot() {
-  const entries = fs.readdirSync(ROOT, { withFileTypes: true });
-
-  for (const entry of entries) {
-    const name = entry.name;
-
-    // Skip static dirs, build dir, and underscored files/dirs
-    if (name === path.basename(OUT_DIR)) continue;
-    if (STATIC_DIRS.includes(name)) continue;
-    if (name.startsWith("_")) continue;
-
-    const abs = path.join(ROOT, name);
-    if (entry.isFile() && path.extname(name) === ".html") {
-      // render and write to build/<same name>
-      const outPath = path.join(OUT_DIR, name);
-      ensureDir(path.dirname(outPath));
-      const rendered = renderPage(abs);
-      fs.writeFileSync(outPath, rendered, "utf8");
-      console.log("Wrote", outPath);
-    } else if (entry.isDirectory()) {
-      // also scan subdirectories (but skip html/ because it's handled separately below)
-      if (name === path.basename(HTML_DIR)) continue;
-      copyHtmlDir(abs, path.join(OUT_DIR, name));
-    }
+function buildHtml() {
+  // Build only from the html/ directory. Skip files/dirs starting with '_'.
+  if (!fs.existsSync(HTML_DIR)) {
+    console.error("html directory not found");
+    process.exit(1);
   }
 
-  // Also include any .html files inside the `html/` directory (existing behavior)
-  if (fs.existsSync(HTML_DIR)) {
-    const htmlEntries = fs.readdirSync(HTML_DIR);
-    for (const file of htmlEntries) {
-      if (file.startsWith("_")) continue;
-      const srcPath = path.join(HTML_DIR, file);
-      const stat = fs.statSync(srcPath);
-      if (stat.isFile() && path.extname(file) === ".html") {
-        const outPath = path.join(OUT_DIR, file);
-        ensureDir(path.dirname(outPath));
-        const rendered = renderPage(srcPath);
-        fs.writeFileSync(outPath, rendered, "utf8");
-        console.log("Wrote", outPath);
-      } else if (stat.isDirectory()) {
-        copyHtmlDir(srcPath, path.join(OUT_DIR, file));
-      }
+  const htmlEntries = fs.readdirSync(HTML_DIR);
+  for (const file of htmlEntries) {
+    if (file.startsWith("_")) continue;
+    const srcPath = path.join(HTML_DIR, file);
+    const stat = fs.statSync(srcPath);
+    if (stat.isFile() && path.extname(file) === ".html") {
+      const outPath = path.join(OUT_DIR, file);
+      ensureDir(path.dirname(outPath));
+      const rendered = renderPage(srcPath);
+      fs.writeFileSync(outPath, rendered, "utf8");
+      console.log("Wrote", outPath);
+    } else if (stat.isDirectory()) {
+      copyHtmlDir(srcPath, path.join(OUT_DIR, file));
     }
   }
 }
@@ -103,6 +85,7 @@ function buildHtmlFromRoot() {
 function copyHtmlDir(srcDir, destDir) {
   for (const entry of fs.readdirSync(srcDir)) {
     if (entry.startsWith("_")) continue;
+    if (entry === "node_modules") continue;
     const srcEntry = path.join(srcDir, entry);
     const destEntry = path.join(destDir, entry);
     const stat = fs.statSync(srcEntry);
@@ -135,7 +118,7 @@ function cleanOut() {
 function main() {
   console.log("Building site to", OUT_DIR);
   cleanOut();
-  buildHtmlFromRoot();
+  buildHtml();
   copyStatic();
   console.log("Build complete");
 }
