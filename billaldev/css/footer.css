@@ -48,13 +48,9 @@
     .footer-mobile {
         display: grid;
         grid-template-columns: auto auto;
-        /* deux colonnes ajustées au contenu */
         column-gap: 80px;
-        /* espace de 80px entre les blocs */
         justify-content: center;
-        /* centre l’ensemble des colonnes */
         align-items: start;
-        /* titres au même niveau */
         padding: 22px 0;
         text-align: left;
     }
