@@ -62,9 +62,9 @@ main h1 {
 /* Filtre des compétences techniques par catégorie */
 .skills-tabs nav {
     display: flex;
-    gap: 18px;
+    /* gap: 18px; */
     margin-bottom: 18px;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 /* Boutons de catégorie */
@@ -123,6 +123,8 @@ main h1 {
 .skill-desc {
     font-size: 16px;
     flex-grow: 1;
+    word-break: break-word;
+    overflow-wrap: anywhere;
 }
 
 /* -Section Expériences- */
@@ -204,4 +206,14 @@ main h1 {
     color: var(--color-button-bg);
     padding: 4px 10px;
     border-radius: 6px;
+}
+
+@media screen and (min-width: 390px) {
+
+    /* Filtre des compétences techniques par catégorie */
+    .skills-tabs nav {
+        gap: 18px;
+        justify-content: flex-start;
+    }
+
 }
