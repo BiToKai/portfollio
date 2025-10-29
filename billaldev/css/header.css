@@ -47,7 +47,7 @@ header nav {
 .menu-horizontal {
     display: none;
     /* masqué par défaut */
-    gap: 30px;
+    gap: 15px;
     font-family: 'Sansita Swashed', Georgia, serif;
     font-size: 13px;
     font-weight: normal;
@@ -159,6 +159,7 @@ header nav {
 
 @media (min-width: 580px) {
     .menu-horizontal {
+        gap: 30px;
         font-size: 18px;
     }
 }

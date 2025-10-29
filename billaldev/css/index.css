@@ -110,6 +110,9 @@ main h1 {
     height: 30px;
     flex-shrink: 0;
     margin-right: 10px;
+    background-color: var(--color-body-bg);
+    padding: 2px;
+    border-radius: 10px;
 }
 
 .skill-title {

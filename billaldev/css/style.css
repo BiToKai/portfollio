@@ -36,9 +36,9 @@
     /* Couleur pour les textes */
     --color-text: #3B0647;
     /* Dégradé du haut vers le bas (par défaut) */
-    --gradient-top-bottom: linear-gradient(to bottom, #50A8A4, #00F0CD);
+    --gradient-top-bottom: linear-gradient(to bottom, #a8d6d3, #00F0CD);
     /* Dégradé du bas vers le haut */
-    --gradient-bottom-top: linear-gradient(to top, #50A8A4, #00F0CD);
+    --gradient-bottom-top: linear-gradient(to top, #a8d6d3, #00F0CD);
     --menu-popup-bg: #808080d9;
     --color-button-bg: #5CFFE7;
     --color-button-valider: #00F0CD;
