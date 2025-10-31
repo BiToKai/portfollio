@@ -102,10 +102,10 @@ form.addEventListener("submit", function (event) {
     // Empêche l'envoi du formulaire
     event.preventDefault();
   } else {
-    //  On empêche l'envoi du formulaire (même si valide)
+    //  On empêche l'envoi du formulaire (même si valide dans pour cette démo)
     event.preventDefault();
     // On affiche un message de succès
-    alert("✅ Votre message a été envoyé avec succès !\nJe vous répondrai dans les plus brefs délais.");
+    alert("Votre message a été envoyé avec succès !\nJe vous répondrai dans les plus brefs délais.");
     // On réinitialise le formulaire
     form.reset();
   }

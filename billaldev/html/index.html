@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
+    <!-- Codage de caract en UTF-8 -->
     <meta charset="UTF-8" />
     <!-- Configuration responsive des vues mobiles -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -53,10 +54,10 @@
         <h2>Compétences Techniques</h2>
         <div class="skills-tabs">
           <nav>
-            <button class="tab active" data-category="all">Tous</button>
-            <button class="tab" data-category="langages">Langages</button>
-            <button class="tab" data-category="outils">Outils</button>
-            <button class="tab" data-category="autres">Autres</button>
+            <button class="tab active" aria-pressed="true" data-category="all">Tous</button>
+            <button class="tab" aria-pressed="false" data-category="langages">Langages</button>
+            <button class="tab" aria-pressed="false" data-category="outils">Outils</button>
+            <button class="tab" aria-pressed="false" data-category="autres">Autres</button>
           </nav>
           <ul class="skills-list">
             <li data-category="langages">
@@ -84,7 +85,7 @@
               <span class="skill-title">Responsive Design</span>
               <span class="skill-desc">Adapte la mise en page à différentes tailles d'écran</span>
             </li>
-            <li data-category="autres">
+            <li data-category="autres" class="last-visible">
               <img class="icon" src="../assets/logo/logo-accessibility.webp" alt="Icone Accessibilité" />
               <span class="skill-title">Accessibilité Web (WCAG)</span>
               <span class="skill-desc">Recommandations pour rendre le web accessible aux handicapés</span>

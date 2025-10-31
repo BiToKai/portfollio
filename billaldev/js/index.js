@@ -3,15 +3,20 @@ const tabs = document.querySelectorAll(".skills-tabs .tab");
 const skills = document.querySelectorAll(".skills-list li");
 
 function updateBorders() {
+  console.log("Début de updateBorders");
   // Retire la classe sur tous les li
   skills.forEach((skill) => skill.classList.remove("last-visible"));
+  console.log("Variable skills", skills);
+  //   Convertit skills en un vrai tableau/array
+  const skillsAsArray = Array.from(skills);
+  console.log("skillsAsArray", skillsAsArray);
   // Récupère tous les éléments visibles
-  const visibleSkills = Array.from(skills).filter((skill) => skill.style.display !== "none");
-  if (visibleSkills.length) {
-    visibleSkills[visibleSkills.length - 1].classList.add("last-visible");
-  }
+  const visibleSkills = skillsAsArray.filter((skill) => skill.style.display !== "none");
+  console.log("visibleSkills", visibleSkills);
+  //   Ajoute last-visible au dernier de la liste.
+  visibleSkills[visibleSkills.length - 1].classList.add("last-visible");
 }
-
+// Ajoute un écouteur d'événement à chaque onglet
 tabs.forEach((tab) => {
   tab.addEventListener("click", () => {
     // Désactive tous les onglets
@@ -43,11 +48,4 @@ tabs.forEach((tab) => {
 });
 
 // Initialisation des bordures au chargement
-updateBorders();
-
-// Initialisation de l’état aria-pressed (par défaut, "Tous" est actif)
-tabs.forEach((t) => t.setAttribute("aria-pressed", "false"));
-const activeTab = document.querySelector(".skills-tabs .tab.active");
-if (activeTab) {
-  activeTab.setAttribute("aria-pressed", "true");
-}
+// updateBorders();
