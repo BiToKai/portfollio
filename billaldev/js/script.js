@@ -1,7 +1,6 @@
-document.addEventListener("DOMContentLoaded", () => {});
 // === Bouton retour haut de page ===
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("✅ Script chargé !");
+  console.log(" Script chargé !");
   const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
   if (scrollToTopBtn) {

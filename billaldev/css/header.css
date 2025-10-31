@@ -10,6 +10,7 @@ header {
     background: var(--gradient-top-bottom);
 }
 
+
 /* Barre de navigation contenant logo et brand */
 header nav {
     display: flex;
@@ -44,14 +45,20 @@ header nav {
 }
 
 /* --- Menu horizontal tablette --- */
+/* FIX pour Sienna */
+header .menu-horizontal a,
+header .menu-horizontal li {
+    font-size: inherit !important;
+}
+
 .menu-horizontal {
     display: none;
     /* masqué par défaut */
-    gap: 15px;
+    gap: 5px;
     font-family: 'Sansita Swashed', Georgia, serif;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: normal;
-    margin-right: 20px;
+    /* margin-right: 20px; */
 }
 
 .menu-horizontal li {
@@ -97,10 +104,10 @@ header nav {
     align-items: start;
     gap: 10px;
     padding: 40px;
-    animation: translation 1s;
+    /* animation: translation 0.1s; */
 }
 
-@keyframes translation {
+/* @keyframes translation {
     from {
         left: -100%;
     }
@@ -108,7 +115,7 @@ header nav {
     to {
         left: 0;
     }
-}
+} */
 
 .liste {
     cursor: pointer;
@@ -125,10 +132,10 @@ header nav {
     align-items: center;
     margin: 24px;
     cursor: pointer;
-    animation: zoom 1s;
+    /* animation: zoom 1s; */
 }
 
-@keyframes zoom {
+/* @keyframes zoom {
     0% {
         transform: scale(0, 0);
     }
@@ -140,7 +147,7 @@ header nav {
     100% {
         transform: scale(1, 1);
     }
-}
+} */
 
 /* --- Responsive --- */
 @media (min-width: 500px) {
@@ -157,9 +164,15 @@ header nav {
     }
 }
 
-@media (min-width: 580px) {
+@media (min-width: 520px) {
     .menu-horizontal {
-        gap: 30px;
+        margin-right: 20px;
+    }
+}
+
+@media (min-width: 570px) {
+    .menu-horizontal {
+        gap: 20px;
         font-size: 18px;
     }
 }
