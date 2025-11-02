@@ -1,4 +1,4 @@
-/* --Page Politique de confidentialité-- */
+/* == privacy.css == */
 
 /* Titre principal */
 .privacy-container h1 {
@@ -21,8 +21,12 @@
     margin-left: 25px;
 }
 
-/* Espacement pour les écrans plus larges */
+/* --- Responsive --- */
+
+/* Tablette et ordi */
 @media (min-width: 500px) {
+
+    /* Augmentation de l'espacement sous le titre */
     .privacy-container h1 {
         margin-bottom: 50px;
     }
