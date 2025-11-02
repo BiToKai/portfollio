@@ -48,5 +48,5 @@ app.get("/:page", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`✅ Serveur lancé : http://localhost:${PORT}`);
+  console.log(`Serveur lancé : http://localhost:${PORT}`);
 });

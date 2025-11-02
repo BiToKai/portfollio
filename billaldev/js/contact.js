@@ -1,7 +1,7 @@
 // Création de variable
 const form = document.querySelector("form");
 const nom = document.querySelector("#nom");
-const nameError = document.querySelector("#name-error");
+const nomError = document.querySelector("#nom-error");
 const prenom = document.querySelector("#prenom");
 const prenomError = document.querySelector("#prenom-error");
 const mail = document.querySelector("#email");
@@ -34,9 +34,9 @@ prenom.addEventListener("input", function () {
 nom.addEventListener("input", function () {
   console.log(nom.value);
   if (!nomPattern.test(nom.value)) {
-    nameError.style.display = "block";
+    nomError.style.display = "block";
   } else {
-    nameError.style.display = "none";
+    nomError.style.display = "none";
   }
 });
 
@@ -85,7 +85,7 @@ form.addEventListener("submit", function (event) {
 
   // Vérifier les formats des champs (affiche les erreurs si besoin)
   if (!nomPattern.test(nom.value.trim())) {
-    nameError.style.display = "block";
+    nomError.style.display = "block";
     formulaireValide = false;
   }
   if (!prenomPattern.test(prenom.value.trim())) {

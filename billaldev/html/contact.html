@@ -9,23 +9,26 @@
       name="description"
       content="Formulaire de contact — envoyez-moi un message pour un devis, une collaboration ou une question technique. Réponse rapide et professionnelle."
     />
-    <!-- Canonical : indique la version officielle de la page -->
+    <!-- Canonical : indique la version officielle de la pg -->
     <link rel="canonical" href="https://codephenix.fr/billaldev/contact.html" />
     <!-- Favicon , double liens pour ameliorer la compatibilité avec tous les navigateurs  -->
     <link rel="icon" type="image/x-icon" href="../assets/favicon/logo.ico" />
     <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon/logo.ico" />
 
-    <!-- Script hCaptcha -->
+    <!-- Intégration du hCaptcha -->
     <script src="https://js.hcaptcha.com/1/api.js" defer></script>
 
     <!-- Lien vers les fichiers CSS -->
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/contact.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/header.css" />
 
     <!-- Flèche de retour en haut -->
     <script src="../js/script.js" defer></script>
   </head>
   <body>
+    <!-- Importation du header -->
     <!--#include file="_header.html"-->
     <main>
       <section class="contact-form-container">
@@ -47,7 +50,7 @@
               <label for="nom">Nom <span class="required">*</span></label>
               <input type="text" id="nom" name="nom" required />
               <!-- Message d'erreur pour le nom  -->
-              <div id="name-error" class="error-message">
+              <div id="nom-error" class="error-message">
                 Le nom ne doit contenir que des lettres, espaces ou tirets.
               </div>
             </div>
@@ -75,12 +78,9 @@
           <div class="form-group checkbox-group">
             <input type="checkbox" id="terms" name="terms" required />
             <label for="terms">
-              <p>
-                En cochant cette case vous acceptez
-                <em><a href="privacy.html" class="footer-link">nos conditions d'utilisation.</a></em
-                ><span class="required">*</span>
-              </p>
-              fœ
+              En cochant cette case vous acceptez
+              <em><a href="privacy.html" class="footer-link">nos conditions d'utilisation.</a></em
+              ><span class="required">*</span>
             </label>
           </div>
 

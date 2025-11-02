@@ -1,39 +1,36 @@
-<link rel="stylesheet" href="../css/header.css" />
+<!-- == _header.html == -->
+
 <header>
+  <!-- Logo et marque -->
   <nav>
-    <!-- Logo et nom de marque -->
-    <a href="index.html"><span class="logo title">{B}</span></a>
-    <!-- Le brand est maintenant un lien cliquable vers l'accueil -->
-    <a href="index.html" class="brand title">BillalDev</a>
+    <a href="index.html" aria-label="Retour à l'accueil via le logo"><span class="logo title">{B}</span></a>
+    <a href="index.html" aria-label="Retour à l'accueil via le marque BillalDev" class="brand title">BillalDev</a>
   </nav>
 
   <!-- Icône burger (mobile uniquement) -->
-  <img src="../assets/menu-burger/menu-burger.webp" alt="Menu" class="burger" />
+  <img src="../assets/menu-burger/menu-burger.webp" alt="Menu burger" class="burger" />
 
-  <!-- Menu horizontal (tablette uniquement) -->
+  <!-- Menu horizontal (tab et ordi uniquement) -->
   <ul class="menu-horizontal">
-    <li><a href="index.html#skills">Compétences</a></li>
-    <li><a href="index.html#experiences">Expériences</a></li>
-    <li><a href="contact.html">Contact</a></li>
+    <li><a href="index.html#skills" aria-label="Voir mes compétences techniques">Compétences</a></li>
+    <li><a href="index.html#experiences" aria-label="Découvrir mes expériences professionnelles">Expériences</a></li>
+    <li><a href="contact.html" aria-label="Me contacter">Contact</a></li>
   </ul>
 
-  <!-- Popup menu latéral (mobile) -->
+  <!-- Popup menu latéral (mobile uniquement) -->
   <div id="popup">
     <ul id="menu-liste">
-      <!-- Accueil : ramène toujours à l'accueil -->
-      <li class="liste" id="Accueil"><a href="index.html">Accueil</a></li>
-
+      <!-- Accueil : ramène tjs à l'accueil -->
+      <li class="liste"><a href="index.html">Accueil</a></li>
       <!-- Compétences : ramène à la section #skills -->
-      <li class="liste" id="Compétences"><a href="index.html#skills">Compétences</a></li>
-
+      <li class="liste"><a href="index.html#skills">Compétences</a></li>
       <!-- Expériences : ramène à la section #experiences -->
-      <li class="liste" id="Expériences"><a href="index.html#experiences">Expériences</a></li>
-
+      <li class="liste"><a href="index.html#experiences">Expériences</a></li>
       <!-- Contact : lien direct -->
-      <li class="liste" id="Contact"><a href="contact.html">Contact</a></li>
+      <li class="liste"><a href="contact.html">Contact</a></li>
     </ul>
 
-    <!-- Bouton pour fermer le menu popup -->
+    <!-- Btn pour fermer le menu popup -->
     <div id="menu-close" class="title">X</div>
   </div>
 </header>

@@ -1,3 +1,5 @@
+/* == header.css == */
+
 /* --Header principal-- */
 header {
     display: flex;
@@ -10,14 +12,13 @@ header {
     background: var(--gradient-top-bottom);
 }
 
-
-/* Barre de navigation contenant logo et brand */
+/* Barre de nav contenant logo et marque */
 header nav {
     display: flex;
     align-items: center;
 }
 
-/* Logo en gras */
+/* Logo */
 .logo {
     font-family: 'Sansita Swashed', Georgia, serif;
     font-weight: bold;
@@ -36,7 +37,7 @@ header nav {
     cursor: pointer;
 }
 
-/* Icône burger cliquable (mobile) */
+/* Icône burger (mobile) */
 .burger {
     width: 32px;
     height: 32px;
@@ -44,34 +45,30 @@ header nav {
     margin-right: 10px;
 }
 
+
 /* --- Menu horizontal tablette --- */
-/* FIX pour Sienna */
+/* FIX pour Sienna qui applique une taille de police incorrecte */
 header .menu-horizontal a,
 header .menu-horizontal li {
     font-size: inherit !important;
 }
 
+/* Menu horizontal par défaut (tab uniquement) */
 .menu-horizontal {
     display: none;
-    /* masqué par défaut */
     gap: 5px;
     font-family: 'Sansita Swashed', Georgia, serif;
     font-size: 16px;
     font-weight: normal;
-    /* margin-right: 20px; */
 }
 
+/* Cacher les éléments de la liste */
 .menu-horizontal li {
     list-style: none;
 }
 
-.menu-horizontal a {
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-
-/*  Popup menu (mobile) */
+/* --- Popup menu (mobile) --- */
+/* Menu par défaut */
 #popup {
     position: fixed;
     display: flex;
@@ -88,11 +85,13 @@ header .menu-horizontal li {
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
+/* Menu visible */
 #popup.show {
     opacity: 1;
     visibility: visible;
 }
 
+/* Liste du menu */
 #menu-liste {
     display: flex;
     flex-direction: column;
@@ -104,23 +103,14 @@ header .menu-horizontal li {
     align-items: start;
     gap: 10px;
     padding: 40px;
-    /* animation: translation 0.1s; */
 }
 
-/* @keyframes translation {
-    from {
-        left: -100%;
-    }
-
-    to {
-        left: 0;
-    }
-} */
-
+/* Curseur pour les éléments de la liste */
 .liste {
     cursor: pointer;
 }
 
+/* Croix pour fermer le menu */
 #menu-close {
     background: var(--gradient-top-bottom);
     color: var(--color-text);
@@ -132,27 +122,14 @@ header .menu-horizontal li {
     align-items: center;
     margin: 24px;
     cursor: pointer;
-    /* animation: zoom 1s; */
 }
 
-/* @keyframes zoom {
-    0% {
-        transform: scale(0, 0);
-    }
-
-    50% {
-        transform: scale(2, 2);
-    }
-
-    100% {
-        transform: scale(1, 1);
-    }
-} */
-
 /* --- Responsive --- */
+
+/* En tablette */
 @media (min-width: 500px) {
 
-    /* Cache le burger et le popup */
+    /* Cache le burger et la popup */
     .burger,
     #popup {
         display: none;
@@ -164,6 +141,7 @@ header .menu-horizontal li {
     }
 }
 
+/* Ajustement du texte de menu */
 @media (min-width: 520px) {
     .menu-horizontal {
         margin-right: 20px;
@@ -177,6 +155,7 @@ header .menu-horizontal li {
     }
 }
 
+/* Ajustement du header */
 @media (min-width: 640px) {
     header {
         padding: 20px 40px;
