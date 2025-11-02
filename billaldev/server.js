@@ -11,7 +11,7 @@ app.use("/js", express.static(path.join(__dirname, "js")));
 app.use("/assets", express.static(path.join(__dirname, "assets")));
 app.use("/fonts", express.static(path.join(__dirname, "fonts")));
 
-// Fonction qui insère header et footer dans une page HTML donnée
+// Fonction qui insère header et footer ds une page HTML donnée
 function renderPage(filePath) {
   let content = fs.readFileSync(filePath, "utf-8");
   content = content.replace(/<!--#include file="(.+?)"-->/g, (match, includePath) => {
@@ -34,7 +34,7 @@ app.get("/", (req, res) => {
 app.get("/:page", (req, res) => {
   let pageName = req.params.page;
 
-  // Ajoute l'extension .html uniquement si aucun point dans le nom (pas déjà une extension)
+  // Ajoute l'extension .html uniquement si aucun point ds le nom (pas déjà une extension)
   if (!pageName.includes(".")) {
     pageName += ".html";
   }

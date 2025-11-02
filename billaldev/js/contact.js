@@ -19,7 +19,7 @@ const mailPattern = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 
 // Pénom
 prenom.addEventListener("input", function () {
-  // Afficher dans la console
+  // Afficher ds la console
   console.log(prenom.value);
   // Autorise les lettres(maj-min), les espaces et les tirets
   // (le ! transforme le if en if not) Si cela ne correspond pas. Affiche le message.
@@ -102,7 +102,7 @@ form.addEventListener("submit", function (event) {
     // Empêche l'envoi du formulaire
     event.preventDefault();
   } else {
-    //  On empêche l'envoi du formulaire (même si valide dans pour cette démo)
+    //  On empêche l'envoi du formulaire (même si valide ds pour cette démo)
     event.preventDefault();
     // On affiche un message de succès
     alert("Votre message a été envoyé avec succès !\nJe vous répondrai dans les plus brefs délais.");

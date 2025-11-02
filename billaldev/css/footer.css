@@ -1,4 +1,6 @@
-/* --Style du footer mobile -- */
+/* == footer.css == */
+
+/* Footer en mobile */
 .footer-mobile {
     display: flex;
     flex-direction: column;
@@ -14,37 +16,36 @@
     width: 100%;
 }
 
-/* Titres ajoutés en HTML — on les cache par défaut pour ne rien changer au mobile */
+/* Titres cachés en mobile */
 .footer-title {
     display: none;
-    /* caché en mobile pour conserver ton rendu d'origine */
 }
 
-/* Curseur pointer pour les liens légaux (mobile kept) */
+/* Liens ds le footer */
 .footer-link {
     cursor: pointer;
     font-family: 'Sansita Swashed', Georgia, serif;
     font-weight: bold;
 }
 
-/* Marges verticales pour les paragraphes (mobile kept) */
+/* Marges verticales pour les paragraphes */
 .footer-mobile p {
     margin: 5px 0;
 }
 
-/* Ligne de séparation fine (visible seulement en mobile) */
+/* Séparateur visuel visible seulement en mobile */
 .footer-separator {
     width: 50px;
     border-bottom: 1px solid var(--color-text);
     margin: 12px 0;
 }
 
-/* ---------------------------
-   TABLETTE (>=500px) — mise en page fidèle à la maquette
-   --------------------------- */
+/* --- Responsive --- */
+
+/* En tablette */
 @media (min-width: 500px) {
 
-    /* container : 2 colonnes centrées */
+    /* Passe le footer en 2 colonnes */
     .footer-mobile {
         display: grid;
         grid-template-columns: auto auto;
@@ -55,43 +56,51 @@
         text-align: left;
     }
 
-    /* masquer la ligne de séparation (utile en mobile mais pas en tablette) */
+    /* Masquer le séparateur visuel */
     .footer-separator {
         display: none;
     }
 
-    /* afficher les titres */
+    /* Affiche les titres (Informations légales et Droits d'auteur) */
     .footer-title {
         display: block;
-        font-size: 14px;
+        /* Fix Sienna pour imposer la taille de police */
+        font-size: 14px !important;
         margin: 0 0 12px 0;
     }
 
     /* paragraphes */
     .footer-block p {
-        font-size: 14px;
+        /* Fix Sienna pour imposer la taille de police */
+        font-size: 14px !important;
         margin: 6px 0;
     }
 
+    /* Changer la police et la taille des liens */
     .footer-link {
         font-family: 'Recursive', Arial, sans-serif;
         font-weight: normal;
-        font-size: 16px;
+        /* Fix Sienna pour imposer la taille de police */
+        font-size: 16px !important;
     }
 
+    /* Aligne les blocs à gauche */
     .footer-left,
     .footer-right {
         align-self: start;
-        /* garantit que les deux blocs restent alignés en haut */
     }
 }
 
+/* Augmentation de la taille de police */
 @media (min-width: 580px) {
+
+    /* Fix Sienna pour imposer la taille de police */
     .footer-title {
-        font-size: 16px;
+        font-size: 16px !important;
     }
 
+    /* Fix Sienna pour imposer la taille de police */
     .footer-block p {
-        font-size: 15px;
+        font-size: 15px !important;
     }
 }

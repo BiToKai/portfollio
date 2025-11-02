@@ -128,7 +128,7 @@
         gap: 36px;
     }
 
-    /*  Chaque groupe de champ dans cette ligne prend 50% de la largeur */
+    /*  Chaque groupe de champ ds cette ligne prend 50% de la largeur */
     .contact-form-container .form-row .form-group {
         flex: 1;
     }

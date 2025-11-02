@@ -1,30 +1,32 @@
-<!-- _footer.html -->
+<!-- == _footer.html == -->
+
 <footer class="footer-mobile">
-  <!-- Bloc gauche : Informations légales (mobile : titres cachés, tablette : titres visibles) -->
+  <!-- Bloc gauche : Informations légales  -->
   <div class="footer-block footer-left">
-    <!-- Titre ajouté (affiché uniquement en tablette) -->
+    <!-- Titre visible uniquement en tab et ordi -->
     <h2 class="footer-title">Informations légales :</h2>
 
-    <!-- Liens légaux (identiques à ton mobile d'origine mais transformés en liens cliquables) -->
+    <!-- Liens légaux -->
     <p><a href="legal.html" class="footer-link">Mentions légales</a></p>
     <p><a href="privacy.html" class="footer-link">Politique de confidentialité</a></p>
   </div>
 
-  <!-- Séparateur visuel (visible uniquement en mobile, masqué en tablette) -->
+  <!-- Séparateur visuel visible uniquement en mobile (aria-hidden pour ne pas être lu par les lecteurs d'écran) -->
   <div class="footer-separator" aria-hidden="true"></div>
 
-  <!-- Bloc droit : Droits d'auteur (titre affiché en tablette) -->
+  <!-- Bloc droit : Droits d'auteur -->
   <div class="footer-block footer-right">
-    <!-- Titre ajouté (affiché uniquement en tablette) -->
+    <!-- Titre visible uniquement en tab -->
     <h2 class="footer-title">Droits d'auteur :</h2>
     <p class="footer-copyright">Copyright © 2025 BillalDev</p>
     <p class="footer-icons">Icons by <strong>Icons8</strong></p>
   </div>
 </footer>
 
-<!--  Bouton retour haut de page  -->
-<button id="scrollToTopBtn" aria-label="Remonter en haut">
-  <img src="../assets/haut-de-page/haut-page-min.webp" alt="Retour en haut" />
+<!--  Btn retour haut de page  -->
+<button id="scrollToTopBtn" aria-label="Remonter tout en haut">
+  <img src="../assets/haut-de-page/haut-page-min.webp" alt="Bouton retour haut de page" />
 </button>
-<!-- widget pour une meilleure accessibilité -->
+
+<!-- Intégration du script Sienna -->
 <script src="../js/sienna.min.js" defer></script>
