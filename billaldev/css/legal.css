@@ -1,9 +1,6 @@
-/* --Page Mentions légales-- */
+/* == legal.css == */
 
-/* Titre principal */
-/* .legal-container {
-    margin-bottom: 30px;
-} */
+/* Titre de la page */
 .legal-container h1 {
     margin-bottom: 20px;
 }
@@ -24,8 +21,12 @@
     margin-left: 25px;
 }
 
-/* Espacement pour les écrans plus larges */
+/* --- Responsive --- */
+
+/* Tablette et ordi */
 @media (min-width: 500px) {
+
+    /* Augmentation de l'espacement sous le titre */
     .legal-container h1 {
         margin-bottom: 50px;
     }
