@@ -6,13 +6,10 @@ const popup = document.getElementById("popup");
 const menuClose = document.getElementById("menu-close");
 
 // Ouvrir le menu burger
-// Quand on clique le menu buger
+// Quand on clique sur le menu burger
 burger.addEventListener("click", () => {
-  // Si la largeur de la fenetre est < a 500px
-  if (window.innerWidth < 500) {
-    // Ajoute la class show a la popup pour l'afficher
-    popup.classList.add("show");
-  }
+  // Ajoute la class show à la popup pour l'afficher
+  popup.classList.add("show");
 });
 
 // Fermer le menu
@@ -27,8 +24,7 @@ menuClose.addEventListener("click", () => {
 document.querySelectorAll("#menu-liste a").forEach((link) => {
   // Pour chaque lien, on ajoute un écouteur d'événement au clic
   link.addEventListener("click", () => {
-    // Quand le lien est cliqué, on retire la classe "show" de l'élément popup
-    // Cela permet de fermer le menu burger
+    // Quand on clique sur un  lien, on retire la classe "show" à la popup pour fermer le menu
     popup.classList.remove("show");
   });
 });
