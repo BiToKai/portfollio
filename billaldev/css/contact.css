@@ -89,14 +89,14 @@
     margin-bottom: 0;
 }
 
-/* --- Notice et Bouton d'envoi --- */
+/* --- Notice et btn d'envoi --- */
 .required-notice {
     font-size: 14px;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-/* --- Bouton d'envoi --- */
+/* --- btn d'envoi --- */
 .submit-btn {
     padding: 15px 24px;
     border: none;
@@ -110,7 +110,7 @@
     margin: 0 auto;
 }
 
-/* --- Effet au survol du bouton --- */
+/* --- Effet au survol du btn --- */
 .submit-btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -147,7 +147,7 @@
         font-size: 15px;
     }
 
-    /* --- Bouton d'envoi --- */
+    /* --- Btn d'envoi --- */
     .submit-btn {
         font-size: 26px;
     }
@@ -169,7 +169,7 @@
         font-size: 16px;
     }
 
-    /* --- Bouton d'envoi --- */
+    /* --- Btn d'envoi --- */
     .submit-btn {
         font-size: 32px;
     }

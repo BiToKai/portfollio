@@ -76,16 +76,15 @@ body {
 /* Décalage pour que le contenu ne soit pas caché sous le header sticky */
 main {
     /* Le contenu prend toute la place dispo */
-    flex: 1;
+    /* flex: 1; */
     /* 68px = hauteur approximative header sticky */
-    padding: 70px 10px 20px 10px;
+    padding: 10px 10px 20px;
     /* font-size: 16px; */
 }
 
-/* Décalage lors des scrolls vers ancres */
+/* Décalage lors des scrolls avc ancres */
 html {
-    height: 100%;
-    scroll-padding-top: 70px;
+    scroll-padding-top: 20px;
 }
 
 /*== Mobile (par défaut) ==*/
@@ -106,7 +105,7 @@ ul {
     font-size: 16px;
 }
 
-/* === Bouton retour haut de page === */
+/* === Btn retour haut de page === */
 #scrollToTopBtn {
     position: fixed;
     bottom: 30px;
@@ -144,7 +143,7 @@ ul {
 /*== Tablette ==*/
 @media (min-width: 500px) {
     main {
-        padding: 0 10% 30px;
+        padding: 15px 10% 30px;
     }
 
     h1 {
@@ -167,12 +166,17 @@ ul {
 
 @media (min-width: 580px) {
     main {
-        padding: 0 15% 30px;
+        padding:
+            20px 15% 30px;
     }
 }
 
 /* Desktop */
 @media (min-width: 1024px) {
+    main {
+        padding: 30px 20% 40px;
+    }
+
     h1 {
         font-size: 32px;
     }
