@@ -1,35 +1,44 @@
 <!DOCTYPE html>
+<!-- Langue utilisée -->
 <html lang="fr">
+  <!-- Métadonnées pour le référencement -->
   <head>
-    <!-- Codage de caract en UTF-8 -->
+    <!-- Encodage des caractères pour le site -->
     <meta charset="UTF-8" />
-    <!-- Configuration responsive des vues mobiles -->
+    <!--  Responsive pour un affichage sur tous les appareils -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Titre affiché ds l'onglet du navigateur -->
     <title>Accueil - BillalDev</title>
+    <!-- Description de la page pour le référencement -->
     <meta
       name="description"
       content="Portfolio de Billal Amghar, développeur web spécialisé en front-end. Découvrez mes compétences en HTML, CSS, JavaScript et plus."
     />
+    <!-- Lien canonique pour indiquer la version officielle de cette pg -->
     <link rel="canonical" href="https://codephenix.fr/billaldev/index.html" />
     <!-- Favicon , double liens pour ameliorer la compatibilité avec tous les navigateurs  -->
     <link rel="icon" type="image/x-icon" href="../assets/favicon/logo.ico" />
     <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon/logo.ico" />
-    <!-- Lien vers les fichiers CSS et JS -->
+    <!-- Lien vers les fichiers CSS -->
     <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/index.css" />
     <link rel="stylesheet" href="../css/header.css" />
-
+    <link rel="stylesheet" href="../css/index.css" />
     <link rel="stylesheet" href="../css/footer.css" />
+    <!-- Lien vers les fichiers JS -->
+    <script src="../js/header.js" defer></script>
+    <script src="../js/index.js" defer></script>
   </head>
 
+  <!-- Body -->
   <body>
+    <!-- Importations du header -->
     <!--#include file="_header.html"-->
 
     <main>
       <!-- Titre de la page d'accueil -->
       <h1>Bienvenue sur mon portfolio</h1>
 
-      <!-- A propos de moi -->
+      <!-- Section A propos de moi -->
       <section id="about-me">
         <h2>À propos de moi</h2>
         <p>Je m'appelle Billal AMGHAR, je suis développeur web et je suis spécialisé en front-end.</p>
@@ -50,10 +59,11 @@
         </p>
       </section>
 
-      <!-- Compétences Techniques -->
+      <!-- Section Compétences Techniques -->
       <section id="skills">
         <!-- Titre de la section compétences techniques -->
         <h2>Compétences Techniques</h2>
+        <!-- Liste des catégories de compétences -->
         <div class="skills-tabs">
           <nav>
             <button class="tab active" aria-pressed="true" data-category="all">Tous</button>
@@ -61,6 +71,7 @@
             <button class="tab" aria-pressed="false" data-category="outils">Outils</button>
             <button class="tab" aria-pressed="false" data-category="autres">Autres</button>
           </nav>
+          <!-- Liste des compétences techniques -->
           <ul class="skills-list">
             <li data-category="langages">
               <img class="icon" src="../assets/logo/logo-html.webp" alt="Icone HTML" />
@@ -95,7 +106,7 @@
           </ul>
         </div>
       </section>
-      <!-- Expériences -->
+      <!-- Section Expériences -->
       <section id="experiences">
         <!-- titre de la section expériences -->
         <h2>Expériences</h2>
@@ -110,14 +121,14 @@
             alt="Capture d'écran du projet My Food"
             class="project-image"
           />
-
+          <!-- Description du projet -->
           <h2>A propos</h2>
           <p>
             Il s'agit d'un site avec une résolution mobile. Le footer reste en haut de la page lors de la navigation. En
             bas de la page, il y a des tags. Lorsqu'on clique dessus, son fond devient noir et sa taille grossit. Je
             l'ai fait avec du JavaScript.
           </p>
-
+          <!-- Technologies utilisées -->
           <h2>Compétences techniques</h2>
           <ul class="skills-tags">
             <li>HTML</li>
@@ -135,14 +146,14 @@
             alt="Capture d'écran du projet Analytics"
             class="project-image"
           />
-
+          <!-- Description du projet -->
           <h2>A propos</h2>
           <p>
             Analytics est un site que j'ai créé avec une version mobile puis desktop. Les barres de statistiques
             générales se remplissent progressivement grâce à une animation. Sur mobile, le menu de navigation à gauche
             disparaît et laisse place à un logo « burger ».
           </p>
-
+          <!-- Technologies utilisées -->
           <h2>Compétences techniques</h2>
           <ul class="skills-tags">
             <li>HTML</li>
@@ -152,10 +163,7 @@
         </article>
       </section>
     </main>
-
+    <!-- Importations du footer -->
     <!--#include file="_footer.html"-->
-
-    <script src="../js/index.js" defer></script>
-    <script src="../js/header.js" defer></script>
   </body>
 </html>

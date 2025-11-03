@@ -1,4 +1,4 @@
-/* === Page Contact === */
+/* --- Styles pour la page de contact --- */
 
 /* --- Conteneur principal du formulaire --- */
 .contact-form-container {
@@ -63,6 +63,7 @@
     outline: 2px solid var(--color-button-bg);
 }
 
+/* --- Zone de texte (textarea) --- */
 .contact-form-container textarea {
     resize: vertical;
 }
@@ -75,9 +76,9 @@
     margin-bottom: 20px;
 }
 
+
 .checkbox-group input[type="checkbox"] {
     width: auto;
-    /* Un peu plus grand pour être plus facile à cocher au doigt */
     width: 1.2em;
     height: 1.2em;
     margin-top: 0.2em;
@@ -117,8 +118,9 @@
 }
 
 
-/* == RESPONSIVE -- ADAPTATION AUX GRANDES TAILLES D'ÉCRAN == */
+/* --- Responsive --- */
 
+/* Tablette */
 @media (min-width: 500px) {
     /* --- Structure du formulaire en 2 colonnes --- */
 
@@ -153,6 +155,7 @@
     }
 }
 
+/* Ordinateur */
 @media (min-width: 1024px) {
 
     /* --- Champs de saisie (input, textarea) --- */

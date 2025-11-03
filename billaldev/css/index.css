@@ -62,7 +62,6 @@ main h1 {
 /* Filtre des compétences techniques par catégorie */
 .skills-tabs nav {
     display: flex;
-    /* gap: 18px; */
     margin-bottom: 18px;
     justify-content: center;
 }
@@ -80,6 +79,7 @@ main h1 {
     transition: background 0.2s;
 }
 
+/* État actif et survolé */
 .skills-tabs .tab.active,
 .skills-tabs .tab:hover {
     background: var(--color-button-bg);
@@ -105,6 +105,7 @@ main h1 {
     border-bottom: none;
 }
 
+/* Icône de compétence */
 .skills-list li .icon {
     width: 30px;
     height: 30px;
@@ -115,6 +116,7 @@ main h1 {
     border-radius: 10px;
 }
 
+/* Titre de la compétence */
 .skill-title {
     font-size: 16px;
     width: 120px;
@@ -123,6 +125,7 @@ main h1 {
     flex-shrink: 0;
 }
 
+/* Description de la compétence */
 .skill-desc {
     font-size: 16px;
     flex-grow: 1;
@@ -133,8 +136,6 @@ main h1 {
 /* -Section Expériences- */
 #experiences {
     margin-top: 30px;
-    /* padding: 20px; */
-    /* évite que le header sticky cache le titre */
     scroll-margin-top: 70px;
 }
 
@@ -145,12 +146,10 @@ main h1 {
 
 /* Texte d’introduction */
 #experiences>p {
-    /* font-family: 'Recursive', sans-serif; */
-    /* font-size: 16px; */
     margin-bottom: 20px;
 }
 
-/* Chaque projet */
+/* Chaque expérience/projet */
 .experience {
     background: var(--gradient-top-bottom);
     border-radius: 12px;
@@ -162,10 +161,6 @@ main h1 {
 #experiences .experience .project-title,
 #experiences h2,
 .experience p {
-    /* font-family: 'Sansita Swashed', Georgia, serif; */
-    /* font-weight: bold; */
-    /* font-size: 18px; */
-    /* color: var(--color-text); */
     margin-bottom: 8px;
 }
 
@@ -184,14 +179,6 @@ main h1 {
     margin-bottom: 8px;
 }
 
-/* Paragraphes */
-/* .experience p { */
-/* font-family: 'Recursive', sans-serif; */
-/* font-size: 16px; */
-/* line-height: 1.5; */
-/* margin-bottom: 10px; */
-/* } */
-
 /* Liste des compétences */
 .skills-tags {
     display: flex;
@@ -201,8 +188,8 @@ main h1 {
     margin: 0;
 }
 
+/* Étiquettes de compétences */
 .skills-tags li {
-    /* font-family: 'Recursive', sans-serif; */
     font-size: 16px;
     font-weight: bold;
     background: var(--color-text);
@@ -210,6 +197,8 @@ main h1 {
     padding: 4px 10px;
     border-radius: 6px;
 }
+
+/* --- Responsive --- */
 
 @media screen and (min-width: 390px) {
 
